@@ -4,6 +4,7 @@ $(document).ready(function() {
         const data = func.reverse();
         let rows = $('<div class="row" id="rows"></div>');
         $('#block').append(rows);
+
         for (let key = 0; key < data.length; key++) {
 
              let list = $('<div class="col-4" id="cols"><div class="card" style="width: 15rem; margin-bottom: 25px">\n' +
