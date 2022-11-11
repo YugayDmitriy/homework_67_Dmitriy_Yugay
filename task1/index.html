@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="messages.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="container"></div>
+    <input id="add-item-btn" type="button" value="+">
+
+<script>
+    document.getElementById("add-item-btn").addEventListener("click", btn_click);
+    function btn_click() {
+        let div = document.createElement('div');
+            div.className = "alert";
+            div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+            setTimeout(() => div.remove(), 5000);
+            document.getElementById("container").appendChild(div);
+            div.insertAdjacentHTML("afterbegin", '<input id="add-item-btn" type="button" value="[x]">');
+            div.firstChild.onclick = () => div.remove()
+    }
+</script>
+</body>
+</html>
