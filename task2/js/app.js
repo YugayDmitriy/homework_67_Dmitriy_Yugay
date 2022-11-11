@@ -1,6 +1,7 @@
 $(document).ready(function() {
     let urlParams = new URLSearchParams(window.location.search);
     let param = urlParams.get('id');
+
     $.get(`https://www.breakingbadapi.com/api/characters/${param}`, function(data) {
 
         let cardBio = $('<div class="card" style="width: 20rem; ' +
